@@ -1,1 +1,6 @@
 <h1>Peliculas</h1>
+<input type="text">
+<button (click)="mostrarPelis()">LISTAR</button>
+<ul *ngFor="let peli of peliculas" class="heroes">
+  <li>{{peli.id}}, {{peli.titulo}}, {{peli.descripcion}}</li>
+</ul>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Peliculas } from '../peliculas';
+import { PELIS } from '../mock-pelis';
 
 @Component({
   selector: 'app-peliculas',
@@ -6,5 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./peliculas.component.css']
 })
 export class PeliculasComponent {
+  peliculas: Peliculas[] = [];
 
+  mostrarPelis(){
+    this.peliculas = PELIS
+  }
 }
+
