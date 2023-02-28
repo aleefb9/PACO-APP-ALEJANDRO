@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import { Observable } from 'rxjs';
+import { Peliculas } from './peliculas';
 @Injectable({
   providedIn: 'root'
 })
@@ -10,9 +11,7 @@ export class ImdbService{
     
    }
 
-  getPeliculas():Observable<any>{
-    var url='https://imdb-api.com/en/API/SearchMovie/k_28i8k3sj/avatar'
-    var urlFin = url;
-   return this._http.get(urlFin);
+  getPeliculas(url: string):Observable<Peliculas[]>{
+    return this._http.get<Peliculas[]>(url);
   }
 }
