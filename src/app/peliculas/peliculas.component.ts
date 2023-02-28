@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Peliculas } from '../peliculas';
 import { PELIS } from '../mock-pelis';
+import { ImdbService } from '../imdb.service';
 
 @Component({
   selector: 'app-peliculas',
@@ -8,10 +9,15 @@ import { PELIS } from '../mock-pelis';
   styleUrls: ['./peliculas.component.css']
 })
 export class PeliculasComponent {
-  peliculas: Peliculas[] = [];
+  public peliculas : any;
+  constructor(private _service: ImdbService ){
 
-  mostrarPelis(){
-    this.peliculas = PELIS
   }
+
+  mostrarPelis(): void{
+   // var peliculas = this._service.getPeliculas()
+  }
+
+
 }
 
