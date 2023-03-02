@@ -1,6 +1,18 @@
 <h1>Peliculas</h1>
 <input type="text" name="buscador" id="buscador">
 <button (click)="mostrarPelis()">LISTAR</button>
+<div class="{{mensajes[0].tipo}}">
+  <h2>{{mensajes[0].titulo}}</h2>
+  <p>{{mensajes[0].description}}</p>
+</div>
+<div *ngIf="mensajes[1].titulo=='HAY ERROR'" class="{{mensajes[1].tipo}}">
+  <h2>{{mensajes[1].titulo}}</h2>
+  <p>{{mensajes[1].description}}</p>
+</div>
+<div *ngIf="mensajes[2].titulo=='ESTA BIEN'" class="{{mensajes[2].tipo}}">
+  <h2>{{mensajes[2].titulo}}</h2>
+  <p>{{mensajes[2].description}}</p>
+</div>
 <table>
   <thead>
     <tr>
@@ -8,7 +20,7 @@
       <th>Nombre</th>
     </tr>
   </thead>
-  <tbody>
+  <tbody *ngIf="peliculas">
     <tr *ngFor="let peli of peliculas.results">
       <td><img src={{peli.image}} alt={{peli.title}} width="128px" height="128px"></td>
       <td>{{peli.title}}</td>

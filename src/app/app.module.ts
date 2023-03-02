@@ -9,6 +9,7 @@ import { PeliculasComponent } from './peliculas/peliculas.component';
 import { FavoritasComponent } from './favoritas/favoritas.component';
 import { CreditosComponent } from './creditos/creditos.component';
 import {HttpClientModule} from "@angular/common/http";
+import { MensajesComponent } from './mensajes/mensajes.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {HttpClientModule} from "@angular/common/http";
     PeliculasComponent,
     FavoritasComponent,
     CreditosComponent,
+    MensajesComponent
     
   ],
   imports: [
