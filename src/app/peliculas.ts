@@ -4,4 +4,4 @@ export interface Peliculas {
   imagen:File | null;
   title:string;
   description:string;
-  }
+}

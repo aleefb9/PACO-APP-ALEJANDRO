@@ -23,8 +23,9 @@
   <tbody *ngIf="peliculas">
     <tr *ngFor="let peli of peliculas.results">
       <td><img src={{peli.image}} alt={{peli.title}} width="128px" height="128px"></td>
-      <td>{{peli.title}}</td>
+      <td id="pulsarReparto" (click)="mostrarReparto()">{{peli.title}}</td>
       <td><button (click)="anadirFav(peli)">fav</button></td>
+      <!-- <td>{{reparto.actores}}</td> -->
     </tr>
   </tbody>
 </table>
